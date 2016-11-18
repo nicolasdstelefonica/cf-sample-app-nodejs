@@ -4,7 +4,7 @@ var cf_app = require( './app/vcap_application')
 var cf_svc = require( './app/vcap_services')
 
 //app.set( 'views', __dirname + '/views')
-//app.set( 'view engine', 'jade')
+app.set( 'view engine', 'jade')
 //app.use( express.static( __dirname + '/public'))
 
 app.get( '/', function ( req, res) {
@@ -20,6 +20,7 @@ app.get( '/', function ( req, res) {
     service_name:       cf_svc.get_service_name(),
     service_plan:       cf_svc.get_service_plan()
   })*/
+ res.render('pages/index')
   res.send('Welcome to Bluemix DevOps with Docker. Lets go use Pipeline Services. I am Nicolas from telefonica, nice to meet you!!' )
 })
 
