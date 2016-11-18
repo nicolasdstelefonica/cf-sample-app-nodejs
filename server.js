@@ -20,6 +20,7 @@ app.get( '/', function ( req, res) {
     service_name:       cf_svc.get_service_name(),
     service_plan:       cf_svc.get_service_plan()
   })
+  res.send('Welcome to Bluemix DevOps with Docker. Lets go use Pipeline Services. I am Nicolas from telefonica, nice to meet you!' );
 })
 
 app.listen( process.env.PORT || 4000)
