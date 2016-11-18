@@ -10,8 +10,8 @@ app.use( express.static( __dirname + '/public'))
 app.get( '/', function ( req, res) {
   res.render( 'pages/index', {
     app_environment:    app.settings.env,
-    application_name:   cf_app.get_app_name(),
-    app_uris:           cf_app.get_app_uris(),
+    application_name:   cf_app.get_app_uris(),
+    app_uris:           cf_app.get_app_name(),
     app_space_name:     cf_app.get_app_space(),
     app_index:          cf_app.get_app_index(),
     app_mem_limits:     cf_app.get_app_mem_limits(),
